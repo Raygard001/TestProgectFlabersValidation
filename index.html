@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test task from Flabers for Tisa Robert</title>
+    <!-- Fronts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/main.css">
+
+</head>
+<body>
+    
+    <section class="section-form-and-map" id="section-form-and-map">
+        <div class="container">
+            <div class="section-form-and-map__tabs-wrapper">
+
+                <div class="section-form-and-map__tabs-button tab__block" id ="tab__block">
+    
+                    
+                    <div class="tab__block-btn active" id="tabCustomer" data-btn="1">
+                        01 Customer info
+                    </div>
+                    <div class="tab__block-btn" id="tabShipping" data-btn="2">
+                        02 Shipping info
+                    </div>
+                    <div class="tab__block-btn" id="tabPayment" data-btn="3">
+                        03 Payment selection
+                    </div>
+
+                </div>
+    
+                <div class="section-form-and-map__tabs-content" id="tab__contents">
+    
+                    <div class="tab__content active" id="stageCustomer" data-content="1">
+                        <h1 class="tab__content-title">Customer information</h1>
+
+                        <form action="success.php" class="customer-information-form" id="customer-information-form">
+
+                            <div class="customer-information-form__input-wrapper">
+                                <div>
+                                    <label class="customer-information-form__input-label" for="firstname">First name</label>
+                                    <input type="text" id="firstname" name="firstname" class="customer-information-form__input" required>
+                                </div>
+                                <div>
+                                    <label class="customer-information-form__input-label" for="lastName">Last name</label>
+                                    <input type="text" id="lastName" name="lastName" class="customer-information-form__input" required>
+                                </div>
+                            </div>
+                            
+                            <label class="customer-information-form__input-label" for="adress">Address</label>
+                            <input type="text" id="adress" name="adress" class="customer-information-form__input customer-information-form__input_mod-width">
+
+                            <div class="customer-information-form__input-wrapper">
+                                <div>
+                                    <label class="customer-information-form__input-label" for="contry">Contry</label>
+                                    <select name="contry" id="contry" type="text" class="customer-information-form__input">
+                                        <option></option>
+                                        <option value="ua">Ukraine</option>
+                                        <option value="ru">Russia</option>
+                                        <option value="by">Belarus</option>
+                                        <option value="hu">Hungary</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="customer-information-form__input-label" for="city">City</label>
+                                    <input type="text" id="city" name="city" class="customer-information-form__input">
+                                </div>
+                            </div>
+
+                            <div class="customer-information-form__input-wrapper">
+                                <div>
+                                    <label class="customer-information-form__input-label" for="postalCode">Postal code</label>
+                                    <input type="text" id="postalCode" name="postalCode" class="customer-information-form__input customer-information-form__buttun">
+                                    <button type="button" class="customer-information-form__buttun-find">Find</button>
+                                </div>
+                                <div>
+                                    <label class="customer-information-form__input-label" for="phone">Phone</label>
+                                    <input type="tel" id="phone" name="phone" class="customer-information-form__input" required placeholder="+380 99 999 99 99">
+                                </div>
+                            </div>
+
+                            <div class="customer-information-form__btn-wrapper">
+                                <button type="button" class="customer-information-form__btn">Return to shop</button>
+                                <button type="submit" class="btn customer-information-form__btn">Continue to shipping</button>
+                            </div>
+                            <div class="customer-information-form__btn-wrapper customer-information-form__btn-wrapper_modal">
+                                <button type="submit" class="btn customer-information-form__btn">Continue to shipping</button>
+                                <button type="button" class="customer-information-form__btn">Return to shop</button>
+                            </div>
+                        </form>
+
+                    </div>
+                    <div class="tab__content" id="stageShipping" data-content="2">
+                        <h1 class="tab__content-title">Shipping information</h1>
+
+                        <div class="tab__content-block-wrapper">
+                            <div class="tab__content-description-wrapper">
+                                <div class="tab__content-description-punkt">
+                                    <p class="tab__content-description-text">Taras Shevchenko</p>
+                                    <p class="tab__content-description-text">Unit 2 Green Mount Park</p>
+                                    <p class="tab__content-description-text">Halifax</p>
+                                    <p class="tab__content-description-text">HX1 5QN</p>
+                                    <p class="tab__content-description-text">Phone: <span>+3 8097 132-45-67</span></p>
+                                </div>
+                                <div class="tab__content-description-links">
+                                    <button type="button" class="tab__content-description-button" id="restart">Edit Address</button>
+                                    <button type="button" class="tab__content-description-button" id="switchSecondTab">Add New</button>
+                                </div>
+                            </div>
+    
+                            <div class="tab__content-map-wrapper" id="map"></div>
+                        </div>
+
+                        <h1 class="tab__content-title tab__content-title-two">Shipping Method</h1>
+                        <form action="#" class="customer-information__form-radio-button" id="customer-information-form__radio-button">
+
+                            <div class="customer-information-form__radio-button-wrapper">
+
+                                <label class="customer-information-form__radio-label">
+                                    <div>
+                                        <input type="radio" name="radioA" class="customer-information-form__radio-btn">
+                                        <p>Standart Delivery</p>
+                                        <span>FREE</span>
+                                    </div>
+                                    <p class="customer-information-form__radio-text">Freebie checkout form of the third step in sketchapp. Feel free to download and use it for your project. </p>
+                                </label>
+
+                                <label class="customer-information-form__radio-label">
+                                    <div>
+                                        <input type="radio" name="radioA" class="customer-information-form__radio-btn">
+                                        <p>Fast Delivery</p>
+                                        <span>$10</span>
+                                    </div>
+                                    <p class="customer-information-form__radio-text">Freebie checkout form of the third step in sketchapp. Feel free to download and use it for your project. </p>
+                                </label>
+                        
+                            </div>
+                            <div class="customer-information-form__btn-wrapper customer-information-form__btn-wrapper-two">
+                                <button type="button" class="customer-information-form__btn" id="backFirstTab" onclick="listOne()">Back to Shipping Info</button>
+                                <button type="button" class="btn customer-information-form__btn" id="switchThirdTab" onclick="listThri()">Continue to Payment</button>
+                            </div>
+                            <div class="customer-information-form__btn-wrapper customer-information-form__btn-wrapper-two customer-information-form__btn-wrapper_modal">
+                                <button type="button" class="btn customer-information-form__btn" id="switchThirdTab" onclick="listThri()">Continue to Payment</button>
+                                <button type="button" class="customer-information-form__btn" id="backFirstTab" onclick="listOne()">Back to Shipping Info</button>
+                            </div>
+                        </form>
+
+
+                    </div>
+                    <div class="tab__content" id="stagePayment" data-content="3">
+                        <h1 class="tab__content-title">Payment</h1>
+                        <div class="customer-information-form__btn-wrapper customer-information-form__btn-wrapper-two">
+                            <button type="button" class="customer-information-form__btn" id="backSecondTab" onclick="listTwo()">Back to Customer Info</button>
+                            <button type="submit" class="btn customer-information-form__btn" id="Tancks" data-submit>Continue to Payment</button>
+                        </div>
+                        <div class="customer-information-form__btn-wrapper customer-information-form__btn-wrapper-two customer-information-form__btn-wrapper_modal">
+                            <button type="submit" class="btn customer-information-form__btn" id="Tancks" data-submit>Continue to Payment</button>
+                            <button type="button" class="customer-information-form__btn" id="backSecondTab" onclick="listTwo()">Back to Customer Info</button>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+
+
+    </section>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap&v=weekly" async></script>
+    <script src="assets/libs/jquery/jquery-1.12.4.min.js"></script>
+    <script src="assets/libs/jquery/jquery.validate.min.js"></script>
+    <script src="assets/libs/jquery/jquery.inputmask.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
